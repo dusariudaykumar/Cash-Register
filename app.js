@@ -25,14 +25,14 @@ function checkBillAmount() {
   }
 }
 function calculate() {
+  hideMessage();
   if (billAmount.value > 0 && cashGiven.value > 0) {
     if (billAmount.value > cashGiven.value) {
       showMessage("Cash is less than bill, please enter right amount");
-    } else {
-      const amoutToBeReturn = cashGiven.value - billAmount.value;
-      returnChange(amoutToBeReturn);
-      hideMessage();
     }
+    hideMessage();
+    const amoutToBeReturn = cashGiven.value - billAmount.value;
+    returnChange(amoutToBeReturn);
   } else {
     showMessage("Enter valid bill amount and cash given to continue");
   }
