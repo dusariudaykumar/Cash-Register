@@ -25,18 +25,23 @@ function checkBillAmount() {
   }
 }
 function calculate() {
-  if (cashGiven.value >= billAmount.value) {
-    const amoutToBeReturn = cashGiven.value - billAmount.value;
-    returnChange(amoutToBeReturn);
-    hideMessage();
+  if (billAmount.value > 0 && cashGiven.value > 0) {
+    if (billAmount.value > cashGiven.value) {
+      showMessage("Cash is less than bill, please enter right amount");
+    } else {
+      const amoutToBeReturn = cashGiven.value - billAmount.value;
+      returnChange(amoutToBeReturn);
+      hideMessage();
+    }
   } else {
-    showMessage("Cash should be great than Bill amount");
+    showMessage("Enter valid bill amount and cash given to continue");
   }
 }
 
 function showMessage(message) {
   errorMsg.style.display = "block";
   errorMsg.innerText = message;
+  displayBox.style.display = "none";
 }
 
 function returnChange(amoutToBeReturn) {
