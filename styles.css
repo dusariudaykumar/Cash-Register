@@ -14,7 +14,24 @@
 header {
   background-color: var(--primary-color);
   padding: 1rem;
+  width: 100%;
   color: white;
+}
+.navHeading {
+  color: white;
+  text-align: left;
+  margin-bottom: 1rem;
+  padding: 0 0 1rem 0;
+}
+.link-head {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+p {
+  font-weight: bold;
+  padding: 1rem;
 }
 #bill-amount,
 #cash-given {
@@ -24,6 +41,8 @@ header {
   max-width: 258px;
   font-weight: bold;
   font-size: 1rem;
+  outline: none;
+  border-radius: 1rem;
 }
 .hero-img {
   max-width: 80%;
@@ -45,6 +64,7 @@ header {
   width: 5rem;
   background-color: var(--primary-color);
   color: #fff;
+  outline: none;
 }
 
 .btnCenter {
@@ -73,6 +93,7 @@ td,
 table {
   border: 2px solid var(--secondary-color);
   padding: 0.5rem;
+  border-collapse: collapse;
 }
 .change {
   margin-top: 1rem;
@@ -81,10 +102,15 @@ table {
 .next-content {
   flex-direction: column;
 }
+.display-box {
+  max-width: 500px;
+  margin: auto;
+}
 .change-box {
-  display: table;
-  flex-direction: column;
-  justify-content: space-around;
+  width: 100%;
+  max-width: 500px;
+  min-height: 150px;
+  margin: auto;
 }
 #error-msg {
   color: #ff4848;
@@ -92,11 +118,14 @@ table {
 .footer {
   text-align: center;
   padding-top: 3rem;
+  padding-bottom: 1rem;
   background-color: var(--primary-color);
+  width: 100%;
 }
 ul,
 li {
   display: inline;
+  padding-left: 0.5rem;
 }
 .icons {
   width: 40px;
